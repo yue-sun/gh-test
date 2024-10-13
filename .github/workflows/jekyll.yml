@@ -1,8 +1,7 @@
 name: Deploy Jekyll site to Pages
 'on':
   push:
-    branches:
-      - website
+    branches:  ["main"]
   workflow_dispatch: null
 permissions:
   contents: read
@@ -20,7 +19,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.2'
           bundler-cache: true
           cache-version: 0
       - name: Setup Pages
